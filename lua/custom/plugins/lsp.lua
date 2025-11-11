@@ -175,8 +175,10 @@ return {
       -- pyright = {},
       -- kotlin_lsp = {},
       -- pylsp = {},
+      -- java
+      jdtls = {},
       kotlin_language_server = {},
-      ktlint = {},
+      -- ktlint = {},
       rust_analyzer = {},
       -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
       --
