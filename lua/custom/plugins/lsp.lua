@@ -176,10 +176,12 @@ return {
       -- kotlin_lsp = {},
       -- pylsp = {},
       -- java
+      jsonls = {},
       jdtls = {},
       kotlin_language_server = {},
       -- ktlint = {},
       rust_analyzer = {},
+      yamlls = {},
       -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
       --
       -- Some languages (like typescript) have entire language plugins that can be useful:
