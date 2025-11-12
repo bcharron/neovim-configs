@@ -1,7 +1,6 @@
--- Fuzzy Finder (files, lsp, etc)
---
 return {
   'nvim-telescope/telescope.nvim',
+  enabled = false,
   event = 'VimEnter',
   dependencies = {
     'nvim-lua/plenary.nvim',
@@ -103,3 +102,5 @@ return {
     end, { desc = '[S]earch [N]eovim files' })
   end,
 }
+
+--
