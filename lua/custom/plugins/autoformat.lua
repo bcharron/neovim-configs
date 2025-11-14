@@ -7,7 +7,13 @@ return {
     {
       '<leader>f',
       function()
-        require('conform').format { async = true, lsp_format = 'fallback' }
+        require('conform').format({ async = true, lsp_format = 'fallback' }, function(err)
+          if err then
+            vim.notify('Format failed: ' .. err)
+          else
+            vim.notify 'Formatted.'
+          end
+        end)
       end,
       mode = '',
       desc = '[F]ormat buffer',
