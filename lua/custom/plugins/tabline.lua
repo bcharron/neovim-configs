@@ -21,25 +21,25 @@ return {
     { '<Leader>bw', '<Cmd>BufferOrderByWindowNumber<CR>', desc = 'Order [B]uffers by [W]indow number' },
 
     -- Move to previous/next
-    { '<A-,>', '<Cmd>BufferPrevious<CR>' },
-    { '<A-.>', '<Cmd>BufferNext<CR>' },
+    { '<A-,>', '<Cmd>BufferPrevious<CR>', mode = { 'n', 'i', 't' } },
+    { '<A-.>', '<Cmd>BufferNext<CR>', mode = { 'n', 'i', 't' } },
 
     -- Re-order to previous/next
-    { '<A-<>', '<Cmd>BufferMovePrevious<CR>' },
-    { '<A->>', '<Cmd>BufferMoveNext<CR>' },
+    { '<A-<>', '<Cmd>BufferMovePrevious<CR>', mode = { 'n', 'i', 't' } },
+    { '<A->>', '<Cmd>BufferMoveNext<CR>', mode = { 'n', 'i', 't' } },
 
     -- Goto buffer in position...
-    { '<A-1>', '<Cmd>BufferGoto 1<CR>' },
-    { '<A-2>', '<Cmd>BufferGoto 2<CR>' },
-    { '<A-3>', '<Cmd>BufferGoto 3<CR>' },
-    { '<A-4>', '<Cmd>BufferGoto 4<CR>' },
-    { '<A-5>', '<Cmd>BufferGoto 5<CR>' },
-    { '<A-6>', '<Cmd>BufferGoto 6<CR>' },
-    { '<A-7>', '<Cmd>BufferGoto 7<CR>' },
-    { '<A-8>', '<Cmd>BufferGoto 8<CR>' },
-    { '<A-9>', '<Cmd>BufferGoto 9<CR>' },
-    { '<A-0>', '<Cmd>BufferLast<CR>' },
-    { '<A-c>', '<Cmd>BufferClose<CR>' },
+    { '<A-1>', '<Cmd>BufferGoto 1<CR>', mode = { 'n', 'i', 't' } },
+    { '<A-2>', '<Cmd>BufferGoto 2<CR>', mode = { 'n', 'i', 't' } },
+    { '<A-3>', '<Cmd>BufferGoto 3<CR>', mode = { 'n', 'i', 't' } },
+    { '<A-4>', '<Cmd>BufferGoto 4<CR>', mode = { 'n', 'i', 't' } },
+    { '<A-5>', '<Cmd>BufferGoto 5<CR>', mode = { 'n', 'i', 't' } },
+    { '<A-6>', '<Cmd>BufferGoto 6<CR>', mode = { 'n', 'i', 't' } },
+    { '<A-7>', '<Cmd>BufferGoto 7<CR>', mode = { 'n', 'i', 't' } },
+    { '<A-8>', '<Cmd>BufferGoto 8<CR>', mode = { 'n', 'i', 't' } },
+    { '<A-9>', '<Cmd>BufferGoto 9<CR>', mode = { 'n', 'i', 't' } },
+    { '<A-0>', '<Cmd>BufferLast<CR>', mode = { 'n', 'i', 't' } },
+    { '<A-c>', '<Cmd>BufferClose<CR>', mode = { 'n', 'i', 't' } },
   },
 
   version = '^1.0.0', -- optional: only update when a new 1.x version is released
