@@ -18,11 +18,31 @@ vim.o.showmode = false
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
 vim.schedule(function()
-  -- vim.o.clipboard = 'unnamedplus'
-  -- Actually, don't yank/change/delete to clipboard.
-  -- Use "+ to manually access clipboard instead.
-  vim.o.clipboard = 'unnamed'
+  vim.o.clipboard = 'unnamedplus'
 end)
+
+-- Keep clipboard integration, but don't overwrite it with delete or change operations
+local nmap = function(lhs, rhs)
+  vim.keymap.set('n', lhs, rhs, { noremap = true })
+end
+
+-- Normal mode
+-- nmap('d', '"_d')
+nmap('c', '"_c')
+-- nmap('x', '"_x')
+-- nmap('D', '"_D')
+-- nmap('C', '"_C')
+-- nmap('X', '"_X')
+nmap('s', '"_s')
+
+-- -- Visual mode
+-- local vmap = function(lhs, rhs)
+--   vim.keymap.set('v', lhs, rhs, { noremap = true })
+-- end
+-- -- vmap('d', '"_d')
+-- vmap('c', '"_c')
+-- vmap('x', '"_x')
+-- vmap('s', '"_s')
 
 -- Enable break indent
 vim.o.breakindent = true
