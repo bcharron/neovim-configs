@@ -26,23 +26,17 @@ local nmap = function(lhs, rhs)
   vim.keymap.set('n', lhs, rhs, { noremap = true })
 end
 
--- Normal mode
--- nmap('d', '"_d')
 nmap('c', '"_c')
--- nmap('x', '"_x')
--- nmap('D', '"_D')
--- nmap('C', '"_C')
--- nmap('X', '"_X')
+nmap('C', '"_C')
 nmap('s', '"_s')
 
--- -- Visual mode
--- local vmap = function(lhs, rhs)
---   vim.keymap.set('v', lhs, rhs, { noremap = true })
--- end
--- -- vmap('d', '"_d')
--- vmap('c', '"_c')
--- vmap('x', '"_x')
--- vmap('s', '"_s')
+-- Visual mode
+local vmap = function(lhs, rhs)
+  vim.keymap.set('v', lhs, rhs, { noremap = true })
+end
+
+vmap('c', '"_c')
+vmap('s', '"_s')
 
 -- Enable break indent
 vim.o.breakindent = true
