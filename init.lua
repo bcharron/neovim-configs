@@ -194,5 +194,26 @@ require('lazy').setup({
   },
 })
 
+vim.api.nvim_create_user_command('AutoFormatDisable', function(args)
+  if args.bang then
+    -- FormatDisable! will disable formatting just for this buffer
+    vim.b.disable_autoformat = true
+  else
+    vim.g.disable_autoformat = true
+  end
+  vim.notify 'Autoformat disabled'
+end, {
+  desc = 'Disable autoformat-on-save',
+  bang = true,
+})
+
+vim.api.nvim_create_user_command('AutoFormatEnable', function()
+  vim.b.disable_autoformat = false
+  vim.g.disable_autoformat = false
+  vim.notify 'Autoformat enabled'
+end, {
+  desc = 'Re-enable autoformat-on-save',
+})
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

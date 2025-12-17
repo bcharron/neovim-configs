@@ -27,6 +27,12 @@ return {
       -- languages here or re-enable it for the disabled ones.
       -- ktlint is too slow to use on save
       local disable_filetypes = { c = true, cpp = true, kotlin = true }
+
+      -- Disable with a global or buffer-local variable
+      if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
+        return
+      end
+
       if disable_filetypes[vim.bo[bufnr].filetype] then
         return nil
       else
