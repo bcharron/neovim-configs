@@ -179,7 +179,8 @@ return {
       -- java
       jsonls = {},
       -- jdtls = {},
-      kotlin_language_server = {},
+      -- kotlin_language_server = {},
+      kotlin_lsp = {},
       -- ktlint = {},
       rust_analyzer = {},
       yamlls = {},
