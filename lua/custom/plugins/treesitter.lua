@@ -24,6 +24,7 @@ return { -- Highlight, edit, and navigate code
       'python',
       'query',
       'regex',
+      'toml',
       'tsx',
       'typescript',
       'rust',

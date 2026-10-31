@@ -215,5 +215,16 @@ end, {
   desc = 'Re-enable autoformat-on-save',
 })
 
+vim.keymap.set('ia', 'Ydate', function()
+  if vim.fn.pumvisible() == 1 then
+    return '' -- don't hijack completion menu
+  end
+  return table.concat({
+    vim.fn.strftime '%a %b %d %T %Z %Y',
+    string.rep('-', 28),
+    '*',
+  }, '\n')
+end, { expr = true, desc = 'Insert date header' })
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
